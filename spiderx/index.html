@@ -156,7 +156,7 @@ $config = [
     ],
 ];
 
-$spider = new \SpiderX\SpiderX($config);
+$spider = new \\SpiderX\\SpiderX($config);
 $spider->on_start = function () {
     // 模拟登录
     return true;
@@ -168,6 +168,22 @@ $spider->on_add_url_fail = function ($pageInfo) {
     return true;
 };<%  layui.each(ruleList, function(index, item){ %>
 
+// ------ start ------
+$spider->on_loadding_start = function ($pageInfo) {
+    return true;
+};
+$spider->on_loaded_start = function ($pageInfo, $html) use ($spider) {
+    /**
+    $pageInfo = [
+        'type' => 'detail',
+        'name' => 'detail',
+        'url' => '',
+        'context' => [],
+    ];
+    $spider->addUrl($pageInfo);
+    */
+    return true;
+};
 // ------ <%=item.name%> start ------
 $spider->on_loadding_<%=item.name%> = function ($pageInfo) {
     return true;
@@ -177,8 +193,8 @@ $spider->on_loaded_<%=item.name%> = function ($pageInfo, $html) {
 };
 $spider->on_fetch_<%=item.name%> = function ($pageInfo, $html, $data) {
     // 获取数据，可执行保存逻辑
-    <%  if(item.type == "list"){ %>//$data = (new \SpiderX\Lib\UtilXpath)->setAttr(["title"])->setHtml($html)->setRange("//table[@id="YKTabCon2_10"]")->getResult();
-    <%  } else { %>//$data["title"] = SpiderX\Lib\Util::subStrByStr("<title>", "</title>", $html, true);<%  } %>
+    <%  if(item.type == "list"){ %>//$data = (new \\SpiderX\\Lib\\UtilXpath)->setAttr(["title"])->setHtml($html)->setRange("//table[@id="YKTabCon2_10"]")->getResult();
+    <%  } else { %>//$data["title"] = \\SpiderX\\Lib\\Util::subStrByStr("<title>", "</title>", $html, true);<%  } %>
     return $data;
 };
 // ------ <%=item.name%> end ------<%  }); %>
