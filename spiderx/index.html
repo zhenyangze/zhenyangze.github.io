@@ -166,7 +166,7 @@ $spider->on_add_url = function ($pageInfo) {
 };
 $spider->on_add_url_fail = function ($pageInfo) {
     return true;
-};<%  layui.each(ruleList, function(index, item){ %>
+};
 
 // ------ start ------
 $spider->on_loadding_start = function ($pageInfo) {
@@ -183,7 +183,7 @@ $spider->on_loaded_start = function ($pageInfo, $html) use ($spider) {
     $spider->addUrl($pageInfo);
     */
     return true;
-};
+};<%  layui.each(ruleList, function(index, item){ %>
 // ------ <%=item.name%> start ------
 $spider->on_loadding_<%=item.name%> = function ($pageInfo) {
     return true;
