@@ -19,7 +19,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <div class="title-article list-card">
                     <div class="list-pic"><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><img src="<?php echo thumb($this); ?>" alt="<?php $this->title() ?>" class="img-full"></a></div>
                     <a href="<?php $this->permalink() ?>">
-                        <h1><?php $this->title() ?></h1>
+                        <h1><?php $this->sticky();$this->title() ?></h1>
                         <p>
                             <?php $this->excerpt(300, '...'); ?>
                         </p>
