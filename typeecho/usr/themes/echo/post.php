@@ -5,7 +5,7 @@
     <div class="layui-row layui-col-space15 main">
         <div class="map">
             <span class="layui-breadcrumb">
-                <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+                <a href="<?php $this->options->siteUrl(); ?>"><i class="layui-icon">&#xe68e;</i>&nbsp;<?php $this->options->title(); ?></a>
                 <?php $this->category(','); ?>
                 <a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><cite><?php $this->title() ?></cite></a>
             </span>
@@ -16,6 +16,7 @@
                 <div class="title-msg">
                     <span><i class="layui-icon">&#xe612;</i> <?php $this->author(); ?></span>
                     <span><i class="layui-icon">&#xe60e;</i> <?php $this->date('Y-m-d A'); ?> </span>
+                    <br class="layui-hide-lg layui-hide-md">
                     <span><i class="layui-icon">&#xe62c;</i> <?php get_post_view($this); ?>℃</span>
                     <span><i class="layui-icon">&#xe63a;</i> <?php $this->commentsNum('%d'); ?>条</span>
                 </div>
@@ -24,7 +25,7 @@
                 <?php $this->content(); ?>
             </div>
             <div class="tags-text">
-                <i class="layui-icon">&#xe66e;</i><?php _e('标签: '); ?><?php $this->tags(', ', true, ''); ?>
+                <i class="layui-icon">&#xe66e;</i>&nbsp;<?php _e('标签: '); ?><?php $this->tags(', ', true, ''); ?>
             </div>
             <div class="copy-text">
                 <div>
@@ -46,7 +47,8 @@
             <?php $this->related(4)->to($relatedPosts); ?>
             <?php if ($relatedPosts->length > 0) {?>
             <div class="page-image">
-                <h4>相关推荐</h4>
+                <h4><i class="layui-icon">&#xe656;</i>&nbsp;相关推荐</h4>
+                <br class="">
                 <div class="layui-row layui-col-space15">
                     <?php while ($relatedPosts->next()): ?>
                     <div class="layui-col-md3">

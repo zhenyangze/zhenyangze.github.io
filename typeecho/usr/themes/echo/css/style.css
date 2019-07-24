@@ -242,6 +242,7 @@ textarea {
 
 .title-article h1 {
     padding-bottom: 10px;
+    margin-top: 0;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -250,7 +251,8 @@ textarea {
 
 .title-article p {
     margin-bottom: 10px;
-    color: #666
+    color: #666;
+    min-height: 60px;
 }
 
 .title-article p span {
@@ -918,8 +920,10 @@ textarea {
     .list-card .list-pic {
         width: 100%;
         height: 100%;
-        line-height: 200px;
         margin-bottom: 10px
+    }
+    .list-card a {
+        display: inline-block;
     }
 
     .tags-text {

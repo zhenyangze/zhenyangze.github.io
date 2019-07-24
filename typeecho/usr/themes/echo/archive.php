@@ -5,13 +5,13 @@
     <div class="layui-row layui-col-space15 main">
         <div class="map">
             <span class="layui-breadcrumb">
-                <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+                <a href="<?php $this->options->siteUrl(); ?>"><i class="layui-icon">&#xe68e;</i>&nbsp;<?php $this->options->title(); ?></a>
                 <a><cite>
                         <?php $this->archiveTitle(array(
                         'category'  =>  _t('%s'),
-                        'search'    =>  _t('包含关键字 %s 的文章'),
-                        'tag'       =>  _t('标签 %s 下的文章'),
-                        'author'    =>  _t('%s 发布的文章')
+                        'search'    =>  _t('搜索 %s'),
+                        'tag'       =>  _t('标签 %s'),
+                        'author'    =>  _t('用户 %s')
                         ), '', ''); ?>
                     </cite></a>
             </span>

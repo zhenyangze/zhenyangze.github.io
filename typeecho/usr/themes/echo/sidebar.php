@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <aside class="sidebar layui-col-md3 layui-col-lg3">
     <div class="component">
-        <form class="layui-form" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+        <form class="layui-form" id="search" method="post" action="" role="search">
             <div class="layui-inline input">
                 <input type="text" id="s" name="s" class="layui-input" required lay-verify="required" placeholder="<?php _e('输入关键字搜索'); ?>" />
             </div>
@@ -27,7 +27,7 @@
             </div>
     </div>
     <div class="column">
-            <h3 class="title-sidebar"><i class="layui-icon">&#xe66e;</i>最新文章</h3>
+            <h3 class="title-sidebar"><i class="layui-icon">&#xe663;</i>最新文章</h3>
             <div>
                 <ul class="widget-list">
                     <?php $this->widget('Widget_Contents_Post_Recent')
@@ -36,7 +36,7 @@
             </div>
     </div>
 
-<?php if ($this->is('index')) {?>
+<?php if ($this->is('index') && $this->getCurrentPage() == 1) {?>
     <div class="column">
         <h3 class="title-sidebar"><i class="layui-icon">&#xe705;</i> <?php _e('友情链接'); ?></h3>
         <ul class="layui-row layui-col-space5">

@@ -14,7 +14,7 @@
     <div class="layui-row layui-col-space15 main">
         <div class="map">
             <span class="layui-breadcrumb">
-                <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+                <a href="<?php $this->options->siteUrl(); ?>"><i class="layui-icon">&#xe68e;</i>&nbsp;<?php $this->options->title(); ?></a>
                 <?php $this->category(','); ?>
                 <a><cite><?php $this->title() ?></cite></a>
             </span>

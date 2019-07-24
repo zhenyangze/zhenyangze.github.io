@@ -22,7 +22,7 @@
 }
 .page-blank-wrap {
     overflow: hidden;
-    width: 800px;
+    /*width: 800px;*/
     margin: 25px auto 0;
     padding: 0 20px;
 }
