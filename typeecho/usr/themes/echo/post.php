@@ -30,7 +30,7 @@
             <div class="copy-text">
                 <div>
 <p>文章标题：《<a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->title() ?></a>》</p>
-<p>版权声明：本站原创文章于<?php $this->date('Y-m-d H:i'); ?>，由<?php $this->author(); ?>发表，共<?php echo mb_strlen(strip_tags('')); ?>个字。</p>
+<p>版权声明：本站原创文章于<?php $this->date('Y-m-d H:i'); ?>，由<?php $this->author(); ?>发表，共<?php echo mb_strlen(strip_tags($this->text)); ?>个字。</p>
                     <p class="hidden-xs">转载请注明：<a href="<?php $this->permalink() ?>"><?php $this->permalink() ?></a> </p>
                 </div>
             </div>

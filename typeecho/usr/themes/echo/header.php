@@ -11,7 +11,9 @@
             'search'    =>  _t('搜索 %s 的结果'),
             'tag'       =>  _t('%s'),
             'author'    =>  _t('%s 发布的文章')
-        ), '', '-'); ?><?php $this->options->title(); ?></title>
+        ), '', '-'); ?><?php if($this->is('index')) { 
+        echo '数据预测模型助力个人发展,企业策划-';
+ } ?><?php $this->options->title(); ?></title>
     <?php $this->header('generator&template'); ?>
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('img/favicon.png'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('layui/css/layui.css'); ?>">
