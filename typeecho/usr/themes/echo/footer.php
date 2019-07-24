@@ -4,7 +4,7 @@
     <div class="t-copy">
         <p>
             <span class="layui-breadcrumb" lay-separator="|">
-                <!--<span><a href="javascript:;">关于我们</a></span>-->
+                <span>备案号：<a href="http://www.miit.gov.cn/" rel=”nofollow”>渝ICP备18008309号-1</a></span>
             </span>
         </p>
         <p>
